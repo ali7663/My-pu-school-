@@ -1,0 +1,289 @@
+"*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#0d3b66;
+    padding:15px 20px;
+    color:white;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:40px;
+}
+
+.nav{
+    display:flex;
+    gap:20px;
+}
+
+.nav a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+}
+
+.nav a:hover{
+    color:yellow;
+}
+
+.menu-toggle{
+    display:none;
+    font-size:26px;#42445A;
+    cursor:pointer;
+
+}
+
+/* Mobile Design */
+@media(max-width:768px){
+
+    .nav{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:70px;
+        right:0;
+        background:#0d3b66;
+        width:100%;
+        text-align:center;
+        padding:15px 0;
+    }
+
+    .nav a{
+        padding:10px;
+        display:block;
+    }
+#nav-menu {
+    display: none;
+}
+
+#nav-menu.show {
+    display: block;
+}
+    
+
+}.counter-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+background: linear-gradient(135deg, #1e3c72, #2a5298);
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+}
+
+.counter-box {
+    flex: 1 1 200px;
+    margin: 20px;
+}
+
+.counter {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.counter-box p {
+    font-size: 18px;
+    margin-top: 10px;
+}.about-section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.about-section h1{
+    font-size:40px;
+    color:#003366;
+    margin-bottom:20px;
+    text-align: center;
+}
+
+.about-section p{
+    max-width:800px;
+    margin:auto;
+    font-size:18px;
+    color: black;
+    line-height:1.6;
+    margin-bottom:50px;
+    text-align: center;
+}
+
+/* CARD GRID */
+.card-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:25px;
+    max-width:1200px;
+    margin:auto;text-align: center;
+}
+
+.card{
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:15px 0 10px;
+    color:#003366;
+    text-align: center;
+}
+
+.card p{
+    padding:0 15px 20px;
+    font-size:15px;
+    color: black;
+}
+    *{margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== HEADER ===== */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:#003366;
+    color:white;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+}
+
+/* ===== NAV MENU ===== */
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+    width: 100px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:yellow;
+}
+
+/* ===== MENU ICON ===== */
+
+/* ===== HERO ===== */
+.Home-section{
+    height:90vh;
+    background:url("contemporary-empty-school-mathematics-classroom-europe.jpg") no-repeat center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-text{
+    background:rgba(0,0,0,0.6);
+    padding:20px;
+    border-radius:10px;
+}
+
+.Home-section h1{
+    font-size:40px;
+}
+
+.Home-section-p{
+    font-size:20px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding: 20px;
+}
+
+
+
+
+
+/* Menu Button */
+.menu-btn{
+  font-size:30px;
+  cursor:pointer;
+  padding:10px 15px;
+  display:none; /* پہلے hide */
+}
+
+/* Navbar Default (Desktop) */
+.navbar{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  background:#003366;
+  padding:15px;
+}
+
+.navbar a{
+  color:white;
+  text-decoration:none;
+  font-size:18px;
+}
+
+/* Mobile Design */
+@media (max-width:768px){
+
+  .menu-btn{
+    display:block; /* موبائل پر show */
+  }
+
+  .navbar{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:60px;
+    left:0;
+    width:100%;
+  }
+
+  .navbar.active{
+    display:flex;
+  }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+
+<body>
+	
+</body>
+
+</html><!DOCTYPE html>
+<html>
+<head>
+<title>School Fee Payment</title>
+<style>
+body{
+font-family: Arial;
+background:#f4f4f4;
+}
+.container{
+width:350px;
+margin:50px auto;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+}
+input, select, button{
+width:100%;
+padding:10px;
+margin:8px 0;
+}
+button{
+background:green;
+color:white;
+border:none;
+cursor:pointer;
+}
+button:hover{
+background:darkgreen;
+}
+</style>
+</head>
+<body>
+<section class="Feepemt">
+<div class="container">
+<h2>School Fee Payment</h2>
+
+<form id="paymentForm">
+<input type="text" placeholder="Student Name" required>
+<input type="text" placeholder="Roll Number" required>
+
+<select required>
+<option value="">Select Class</option>
+<option>Class 1</option>
+<option>Class 2</option>
+<option>Class 3</option>
+</select>
+
+<input type="number" placeholder="Amount (PKR)" required>
+
+<select required>
+<option value="">Select Payment Method</option>
+<option>jazz Cash</option>
+<option>Easypaisa</option>
+</select>
+
+<button type="submit">Pay Now</button>
+</form>
+
+<p id="message"></p>
+
+</div>
+</section>
+<script>
+document.getElementById("paymentForm").addEventListener("submit", function(e){
+e.preventDefault();
+document.getElementById("message").innerHTML =
+"Payment Request Submitted Successfully!";
+});
+</script>
+
+</body>
+</html>

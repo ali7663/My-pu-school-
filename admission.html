@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .form-container {
+      background-color: #fff;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    h2 {
+      text-align: center;
+      color: darkblue; /* پیلا رنگ */
+      margin-bottom: 20px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: navy;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Admission Form</h2>
+  <form id="admission-form">
+    <input type="text" name="student_name" placeholder="Student Name" required>
+    <input type="text" name="father_name" placeholder="Father Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <select name="class" required>
+      <option value="">Select Class</option>
+      <option value="Nursery">Nursery</option>
+      <option value="KG">KG</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+    <textarea name="address" placeholder="Address" rows="3"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<!-- EmailJS SDK v4+ -->
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init("U6Q6lkiZXC62TnQkR"); // یہاں اپنی Public Key ڈالیں
+  })();
+
+  // فارم سبمٹ ہینڈلر
+  const form = document.getElementById('admission-form');
+  form.addEventListener('submit', function(event){
+    event.preventDefault();
+
+    emailjs.sendForm('service_hgw7214', 'template_oe8o0no', this)
+      .then(function(){
+        alert('Form submitted successfully!');
+        form.reset();
+      }, function(error){
+        alert('Error sending form: ' + JSON.stringify(error));
+      });
+  });/////
+
+  // ✅ Replace with your deployed Web App URL
+  const scriptURL = "https://script.google.com/home/projects/1tLDCAF4TJoJNYrIa1MH0LqNARSQe0cCjyACy99p550D2blbT82BMNUZ3/edit";
+
+  document.getElementById('admission-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // form submit کو روکے
+
+    const data = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value
+    };
+
+    fetch(scriptURL, {
+      method: 'POST',
+      body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(response => {
+      alert("Data saved to Google Sheet! ✅");
+      document.getElementById('admission-form').reset(); // form clear کرے
+    })
+    .catch(error => console.error('Error!', error.message));
+  });
+</script>
+
+
+  
+</body>
+</html>

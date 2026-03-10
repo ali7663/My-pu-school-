@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Group Profile</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f7fa;
+}
+
+.group-section{
+    padding:50px 20px;
+    text-align:center;
+}
+
+.group-section h2{
+    font-size:32px;
+    color:#003366;
+    margin-bottom:30px;
+}
+
+.group-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.group-card{
+    background:white;
+    width:300px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.group-card:hover{
+    transform:translateY(-10px);
+}
+
+.group-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.group-card h3{
+    color:#003366;
+    margin:15px 0 10px;
+}
+
+.group-card p{
+    padding:0 15px;
+    font-size:14px;
+    color:#555;
+}
+
+.group-card button{
+    margin:15px 0 20px;
+    padding:10px 20px;
+    border:none;
+    background:#003366;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.group-card button:hover{
+    background:#0055aa;
+}
+</style>
+</head>
+
+<body>
+
+<section class="group-section">
+<h2>Our Group Profile</h2>
+
+<div class="group-container">
+
+<div class="group-card">
+<img src="premium_photo-1661544197235-589474eefb0e.jpeg" alt="Primary Students">
+<h3>Primary Group</h3>
+<p>
+Our Primary Group focuses on building strong foundations in education.
+We encourage creativity, confidence, and character development
+through engaging classroom activities.
+</p>
+<button onclick="alert('Primary Group Details Coming Soon!')">View Profile</button>
+</div>
+
+<div class="group-card">
+<img src="pexels-thirdman-8926554.jpg" alt="Middle School">
+<h3>Middle Group</h3>
+<p>
+The Middle Group enhances analytical thinking and leadership skills.
+Students participate in science fairs, debates, and sports to grow academically and socially.
+</p>
+<button onclick="alert('Middle Group Details Coming Soon!')">View Profile</button>
+</div>
+
+<div class="group-card">
+<img src="images (1).jpeg" alt="Senior Students">
+<h3>Senior Group</h3>
+<p>
+Our Senior Group prepares students for higher education and professional careers.
+We provide career counseling, advanced learning programs, and personality development training.
+</p>
+<button onclick="alert('Senior Group Details Coming Soon!')">View Profile</button>
+</div>
+
+</div>
+</section>
+
+</body>
+</html>
